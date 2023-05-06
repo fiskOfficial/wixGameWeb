@@ -12,7 +12,8 @@
   b, u, i, center,
   dl, dt, dd, ol, ul, li,
   fieldset, form, label, legend,
-  table, caption, tbody, tfoot, thead, tr, th, td,p {
+  table, caption, tbody, tfoot, thead, tr, td,p
+  {
     margin: 0;
     padding: 0;
     border: 0;
@@ -31,4 +32,4 @@
     text-decoration: none;
     color: inherit;
   }
-  
+ 
