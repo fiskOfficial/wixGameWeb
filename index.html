@@ -15,6 +15,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Noto+Serif+Gujarati:wght@600&family=PT+Serif:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Roboto+Serif:ital,wght@1,300&display=swap" rel="stylesheet">
+
 <body>
 
     <div class="backgroundImg"></div>
@@ -45,15 +49,18 @@
 
 <div class="ralitiveDiv">
      <div class="coverContainer">
-        <div class="filter"><img src="kipon-cover.jpg" alt="" class="firstCover">
+        <div class="parent"><img src="kipon-cover.jpg" alt="" class="firstCover">
+            <div class="filter"></div>
             </div>
-        <div class="filter"><img src="robotrix-cover.jpg" class="secoundCover">
-            
+        <div class="parent"><img src="robotrix-cover.jpg" class="secoundCover">
+            <div class="filter"></div>
      </div>
-        <div class="filter"><img src="treasure_box-cover.jpg" class="thirdCover">
-        
+        <div class="parent"><img src="treasure_box-cover.jpg" class="thirdCover">
+            <div class="filter"></div>
         </div>
-        <div class="forthCover filter"> <span class="textBoxCover">Explore our <br> games <br> &darr;</span></div>
+        <div class="forthCover parent"> <span class="textBoxCover">Explore our <br> games <br> &darr;</span>
+            <div class="filterS"></div>
+        </div>  
     </div>
 </div>
 
@@ -93,27 +100,67 @@
 
    
 
-    <div class="containor">
+<div class="containor"> 
         <div class="gameWidget-O">
-            <img src="kipon-icon.jpg" alt="" class="kipon-icon">
-            <!-- <div class="opl">
-                <p class="uio">Treasure Box</p>
-                <p class="iop">Adventure - Free</p> 
-             </div> -->
+                <div class="boxFlex">
+                    <img src="kipon-icon.jpg" alt="" class="kipon-icon">
+               <div class="textBoxText">     
+                <p class="uio">Kipon</p>
+                <p class="iop">Casual - Free</p>
+                </div> 
+              </div>
+              <p>I'm a paragraph. Click here to add your own text and edit me.
+                I`m a great place for you to tell a story and let your users
+                 know a little more about you.
+           </p> 
+           <div class="appBtn">
+            <img src="appstore-apple.png" alt="" class="apple">
+            <img src="appstore-google.png" alt="" class="android">
+        </div> 
         </div>
-    </div>
+    </div>  
 
-    <div class="containor" ><div class="gameWidget-T">
-        <img src="robotrix-icon.jpg" alt="" class="robotrix-icon">
-        <p class="uio">Treasure Box</p>
-        <p class="iop">Adventure - Free</p>
+   <div class="containor" >
+    <div class="gameWidget-T">
+        <div class="boxFlex">
+            <img src="robotrix-icon.jpg" alt="" class="robotrix-icon">
+       
+       <div class="textBoxText">     
+        <p class="uio">Robotrix</p>
+        <p class="iop">RPG - Free</p>
+        </div> 
+      </div>
+      <p>I'm a paragraph. Click here to add your own text and edit me.
+        I`m a great place for you to tell a story and let your users
+         know a little more about you.
+   </p> 
+   <div class="appBtn">
+    <img src="appstore-apple.png" alt="" class="apple">
+    <img src="appstore-google.png" alt="" class="android">
+</div> 
     </div>
-</div>
+</div> 
 
-     <div class="containor" ><div class="gameWidget-Th">
-        <img src="treasure_box-icon.jpg" alt="" class="treasure_box-icon">  
-        </div>
-    </div>
+     <div class="containor" >
+    <div class="gameWidget-Th"> 
+            <div class="boxFlex">
+                <img src="treasure_box-icon.jpg" alt="" class="treasure_box-icon">
+           <div class="textBoxText">     
+            <p class="uio">Treasure Box</p>
+            <p class="iop">Adventure - Free</p>
+            </div> 
+          </div>
+          <p>I'm a paragraph. Click here to add your own text and edit me.
+            I`m a great place for you to tell a story and let your users
+             know a little more about you.
+       </p> 
+       <div class="appBtn">
+        <img src="appstore-apple.png" alt="" class="apple">
+        <img src="appstore-google.png" alt="" class="android">
+    </div> 
+
+        </div> 
+    </div>  
 
     <div class="creatureCon"><img src="creature2.png" class="creature2"></div>
 
@@ -127,10 +174,11 @@
 
 <div class="formBackground">
 
-     <div class="form">
-    <div ><img src="creature3.png" alt="" class="creature3" data-aos="slide-up" data-aos-duration="5000"></div> 
+     <!-- <div class="form"> -->
+        <div class="creature3Containor"><img src="creature3.png" alt="" class="creature3" data-aos="slide-up" data-aos-duration="5000"></div>
 
         <div class="bXlU">
+            
             <div class="huKg">
                     <h6>Get In Touch</h6>
                     <p class="ytui">I'm a paragraph. Click here to add <br> your own text and edit me.</p>
@@ -154,10 +202,10 @@
             </div>
         </div>
     </div>
-</div>
+<!-- </div> -->
 
 <div class="nPm">
-    <p>Join Our Team</p>
+    <p class="our">Join Our Team</p>
     <h5>It takes the world`s best talent <br> to change the game.</h5>
     <button class="pnbBtn">Explore Careers</button>
 </div>
@@ -165,7 +213,7 @@
 
 <div class="backgroundForm">
     <div class="uHp">
-        <p class="sub">Subscribe to OUR Newsletter</p>
+        <p class="sub">Subscribe to Our Newsletter</p>
         <span class="Unl">Email</span>
      <div>  
         <input type="email" class="ema">

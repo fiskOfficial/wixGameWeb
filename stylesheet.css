@@ -2,6 +2,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 90% 1fr;
     grid-template-rows: 10;
+
 }
 
 .backgroundImg {
@@ -26,7 +27,6 @@ body {
 
 @keyframes fade-in {
     0% {opacity: 0;}
-    /* 70%{opacity: 0.6;} */
     100%{opacity: 1;}
 }
 
@@ -65,7 +65,6 @@ h2 {
     height: 100px;
     position: fixed;
     left: 5%;
-    z-index: 3;
     transition: opacity .5s, visibility .5s;
 
     grid-row: 1;
@@ -76,6 +75,7 @@ h2 {
 
 .nav,.navRight {
     animation: slide 1.5s ease-in 1;
+    z-index: 20;
 }
 
 @keyframes slide {
@@ -154,60 +154,80 @@ grid-column: 2;
 
 
 .coverContainer {
-
     width: 100%;
 
     position: relative;
-    top: -25%;
-
+    top: -31%;
 
     display:flex;
     justify-content: space-between;
 }
 
 .firstCover, .secoundCover, .thirdCover {
-
     border-radius: 30px;
     width: 20rem;
-    /* filter: drop-shadow(0 0 0.75rem red); */
-}
+    height: 100%;
+  }
+  
 
 .filter {
-    position: relative;
-}
-
-.filter::before { 
-    
     border-radius: 30px;
     content: "";
-    height: 99%;
+    height: 100%;
     width: 100%;
-    position: absolute;
+    position: relative;
     z-index: 2;
-    top: 0;
+    bottom: 101%;
     left: 0;
     background: linear-gradient(186deg, rgba(252,6,6,0.021446078431372584) 0%, rgba(254,0,0,0.3883928571428571) 100%);
     opacity: 1;
-    transition: opacity 1s ease-in-out;
+    overflow: hidden;
+}
+
+.filterS {
+    border-radius: 30px;
+    content: "";
+    height: 98%;
+    width: 320px;
+    position: absolute;
+    z-index: 2;
+    bottom: 1%;
+    right: 0;
+    background: linear-gradient(186deg, rgba(252,6,6,0.021446078431372584) 0%, rgba(254,0,0,0.3883928571428571) 100%);
+    opacity: 1;
 
 }
 
-.filter::before:hover {
-    background: none;
-}
+
+
+.filter:hover,.filterS:hover {
+    /* transform: scale(1.5); */
+    transition: .6s ease-in; 
+    opacity:0;
+    overflow: hidden;
+  }
+
+
+
+
 
 
 
 .forthCover {
     width: 20rem;
-    background: rgb(255,254,0);
+    height: 100%;
     background: linear-gradient(177deg, rgba(255,254,0,1) 0%, rgba(254,117,0,1) 100%);
     border-radius: 30px;
-    /* margin-left: 0; */
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 165px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+}
+
+.forthCover:hover{
+    background: linear-gradient(139deg, rgba(249,252,6,1) 0%, rgba(240,239,7,1) 100%);
+    /* transition: background 2s linear; */
 
 }
 
@@ -215,6 +235,10 @@ grid-column: 2;
     font-size: 2rem;
     text-align: center;
 }
+
+/* .textBoxCover:hover {
+ 
+} */
 
 
 .ralitiveDiv {
@@ -302,12 +326,21 @@ h3 {
     background: #da392b;
     color: white;
     border: none;
-    width: 7rem;
+    width: 150px;
     height: 4rem;
-    border-radius: 16px;
+    border-radius: 10px;
     font-size: 0.95rem;
     display: block;
     margin: auto;
+    margin-bottom: 50px;
+    padding: 0 15px 0 15px;
+}
+
+.btn:hover {
+    border:black solid 1px;
+    background-color: white;
+    transition: background 0.2s linear;
+    color: black;
 
 }
 
@@ -322,6 +355,8 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
   }
   
 .contentTwo {
@@ -370,9 +405,8 @@ h4 {
 
     background-color: rgb(249, 246, 238);
     margin: 0;
-    width: 450px;
-    height: 400px;
-    color: aliceblue;
+    width: 380px;
+    height: 380px;
     border-radius: 25px;
     padding: 40px;
     box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
@@ -382,6 +416,8 @@ h4 {
     grid-column: 2;
 }
 
+
+
 .containor {
     width: 50%;
     height: 50%;
@@ -390,25 +426,46 @@ h4 {
 
 .gameWidget-O {
   color: black;
+  position: relative;
+  left: 15%;
 }
 
 .gameWidget-T {
-    position: absolute;
-    right: 0;
+    position: relative;
+    left: 32%;
     top: 0;
-
 }
  
 .gameWidget-Th {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    position: relative;
+    top: 192px;
+    left: 15%;
+}
+
+.boxFlex {
+    display: flex;
+    margin-bottom: 45px;
+}
+
+.textBoxText {
+    /* margin: auto; */
+    color: black;
+    text-align:start;
+    margin-top: 34px;
+    margin-left: 8px;
+}
+
+.uio {
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 8px;
 }
 
 .kipon-icon,.robotrix-icon,.treasure_box-icon {
     border-radius: 30px;
     border: white solid 5px;
-    width: 125px;
+    width: 90px;
+    height: 90px;
     display: inline;
 }
 
@@ -436,6 +493,7 @@ h4 {
     background-size: cover;
     width: 100%;
     height: 800px;
+    position: relative;
 } 
 
 .backgroundForm {
@@ -453,23 +511,24 @@ h4 {
     align-items: center;
 }
 
-.form {
+/* .form {
     height: 800px;
     position: relative;
 
-}
+} */
 
 .bXlU {
    position: absolute; 
-   width: 400px;
+   width: 450px;
    height: 698px;
    background-color: white;
    border-radius: 15px;
    left: 189px;
    top: 483px;
-   z-index: 2;
+   z-index: 4;
    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
     0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    position: relative;
 }
 
 .nPm {
@@ -477,6 +536,7 @@ h4 {
     grid-column: 2;
     color: white;
     margin-top: 100px;
+    z-index: 2;
 
 
 }
@@ -606,12 +666,14 @@ footer {
 
 .creature3 {
     position: absolute;
-    bottom: 0;
     width: 580px;
-    right: 33px;
-    /* transition-duration: 4000ms; */
-    /* animation: slide 2s linear; */
-    /* animation-delay: 2s; */
+    right: 106px;
+    top: 309px;
+}
+
+.creature3Containor {
+    z-index: index 2;
+    position: relative;
 }
 
 body[data-aos-duration='5000'] [data-aos],
@@ -700,7 +762,15 @@ h6 {
 
 .yYj:hover {
     background-color: white;
+}
 
+.pnbBtn:hover {
+    background-color: white;
+}
+
+.our {
+    font-size: 22px;
+    font-weight: bold;
 }
   
 
